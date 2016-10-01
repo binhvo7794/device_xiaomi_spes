@@ -461,6 +461,9 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi
 
+# SystemUI
+EXCLUDE_SYSTEMUI_TESTS := true
+
 # Telephony
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
