@@ -531,4 +531,5 @@ endif
 
 # XiaomiParts
 PRODUCT_PACKAGES += \
-    XiaomiParts
+    XiaomiParts \
+    RemovePackages
