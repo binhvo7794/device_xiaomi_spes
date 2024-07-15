@@ -4,9 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
 # Include GSI
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
@@ -29,6 +26,9 @@ endif
 
 # Enable Dynamic partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Flatten APEXs for performance
+OVERRIDE_TARGET_FLATTEN_APEX := true
 
 # API level
 PRODUCT_SHIPPING_API_LEVEL := 30
