@@ -1,6 +1,6 @@
 on post-fs-data
-    mkdir /data/vendor/nfc 0770 nfc nfc 
-	
+    mkdir /data/vendor/nfc 0770 nfc nfc
+
 service stflashtool /vendor/bin/STFlashTool
     class late_start
     group nfc
@@ -18,6 +18,9 @@ service nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service.st
 on post-fs && property:ro.boot.hwname=spesn
     start stflashtool
     setprop ro.vendor.se.type HCE,UICC
+
+on boot
+    stop vendor.st_nfc_hal_service
 
 on boot && property:ro.boot.hwname=spesn
     start nfc_hal_service
