@@ -791,7 +791,18 @@
     <!-- The list of components which should be automatically disabled for a specific package. -->
     <string-array name="config_deviceDisabledComponents" translatable="false">
         <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
-        <item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
+	<item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
+	<item>com.google.android.gms/.stats.service.DropBoxEntryAddedReceiver</item>
+	<item>com.google.android.gms/.measurement.AppMeasurementJobService</item>
+	<item>com.google.android.gms/.gms.measurement.AppMeasurementService</item>
+	<item>com.google.android.gms/.measurement.PackageMeasurementService</item>
+	<item>com.google.android.gms/.measurement.PackageMeasurementTaskService</item>
+	<item>com.google.android.gms/.measurement.service.MeasurementBrokerService</item>
+	<item>com.google.android.gms/.analytics.AnalyticsService</item>
+	<item>com.google.android.gms/.analytics.AnalyticsTaskService</item>
+	<item>com.google.android.gms/.analytics.internal.PlayLogReportingService</item>
+	<item>com.google.android.gms/.analytics.service.AnalyticsService</item>
+	<item>com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver</item>
     </string-array>
 
     <!-- Device configuration indicating whether we should avoid using accelerated graphics
